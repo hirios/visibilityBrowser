@@ -11,7 +11,14 @@ https://stackoverflow.com/questions/58772369/headless-google-chrome-how-to-preve
 https://stackoverflow.com/questions/69268755/disable-page-visibility-api-in-chrome-extension-for-facebook
 
 
-https://stackoverflow.com/questions/9515704/use-a-content-script-to-access-the-page-context-variables-and-functions/9517879#9517879
+https://stackoverflow.com/questions/47660653/chrome-extension-how-to-disable-page-visibility-api
+
+
+for (event_name of ["visibilitychange", "webkitvisibilitychange", "blur"]) {
+  window.addEventListener(event_name, function(event) {
+        event.stopImmediatePropagation();
+    }, true);
+}
 
 
 
